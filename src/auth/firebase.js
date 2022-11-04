@@ -15,12 +15,12 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC47GkduSZdmOTlh0XXr57W6ZMG2ZcJk6I",
-  authDomain: "movie-app-e48e8.firebaseapp.com",
-  projectId: "movie-app-e48e8",
-  storageBucket: "movie-app-e48e8.appspot.com",
-  messagingSenderId: "760674641161",
-  appId: "1:760674641161:web:131f3f4dc0b54f63cf5fd8",
+  apiKey: "AIzaSyBN4f8Dw4LcOJQ7J8WaQ6eB7JEchKoRu2A",
+  authDomain: "reactmovieapp-b301a.firebaseapp.com",
+  projectId: "reactmovieapp-b301a",
+  storageBucket: "reactmovieapp-b301a.appspot.com",
+  messagingSenderId: "1027493718398",
+  appId: "1:1027493718398:web:869061dd3acbee63fc2b2f",
 
   // apiKey: process.env.REACT_APP_apiKey,
   // authDomain: process.env.REACT_APP_authDomain,

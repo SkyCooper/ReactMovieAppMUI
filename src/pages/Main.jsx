@@ -7,6 +7,8 @@ import MovieCard from "../components/MovieCard";
 import { v1 as uuid } from "uuid";
 import { useAuthContext } from "../context/AuthContext";
 import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import  Container  from "@mui/material/Container";
 
 const Main = () => {
   const { movies, setMovies } = useAuthContext();
@@ -28,13 +30,27 @@ const Main = () => {
 
   return (
     <>
-      <div>
-        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-        <Button variant="outlined" startIcon={<SearchIcon />}>
-          Search
-        </Button>
-      </div>
-      <Grid container spacing={2} justifyContent="center" alignItems="center">
+      <Container>
+        <Box sx={{ mt: 4, textAlign: "center" }}>
+          <TextField
+            id="outlined-basic"
+            label="Outlined"
+            variant="outlined"
+            margin="dense"
+          />
+          <Button variant="outlined" startIcon={<SearchIcon />}>
+            Search
+          </Button>
+        </Box>
+      </Container>
+
+      <Grid
+        container
+        spacing={2}
+        justifyContent="center"
+        alignItems="center"
+        mt={4}
+      >
         {movies.map((movie) => (
           <MovieCard key={uuid()} {...movie} />
         ))}
