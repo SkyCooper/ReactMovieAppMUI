@@ -1,9 +1,18 @@
-import React from 'react'
+import { createContext, useContext, useState } from "react";
 
-const AuthContext = () => {
+export const AuthContext = createContext();
+
+export const AuthProvider = ({ children }) => {
+  const [searchText, setSearchText] = useState("");
+  const [movies, setMovies] = useState([])
+  const values = { movies, setMovies, searchText, setSearchText };
   return (
-    <div>AuthContext</div>
-  )
-}
+    <AuthContext.Provider value={values}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
 
-export default AuthContext
+export const useAuthContext = ()=>{
+  return useContext(AuthContext);
+}

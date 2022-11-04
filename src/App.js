@@ -1,7 +1,8 @@
 import "./App.css";
+import AppRouter from "./router/AppRouter";
 
-function App() {
-  return <h1>start</h1>;
-}
+const App = () => {
+  return <AppRouter/>
+};
 
 export default App;
