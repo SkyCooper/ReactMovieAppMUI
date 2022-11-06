@@ -1,5 +1,7 @@
 # Project : Movie App
 
+<img src="https://thumbs.gfycat.com/ExemplaryFairFeline-max-1mb.gif" align="right" height="300" width="400" />
+
 ## Check The Live Website ➡️ [Live Website](https://skycooper.github.io)
 
 ## Visualization of the Website
