@@ -1,0 +1,32 @@
+REACT_APP_API_KEY1=26a5985902ec1ca50921e555b3baaab3
+REACT_APP_API_KEY2=7d200361aec3960ee41bf91bdd301fa3
+REACT_APP_API_KEY3=ed82f4c18f2964e75117c2dc65e2161d
+REACT_APP_API_KEY4=54fbefb39b3c6f8813fbef283702f5fc
+REACT_APP_API_KEY5=
+REACT_APP_API_KEY6=
+REACT_APP_API_KEY7=
+REACT_APP_API_KEY8=
+
+
+
+
+REACT_APP_apiKey=AIzaSyC47GkduSZdmOTlh0XXr57W6ZMG2ZcJk6I
+REACT_APP_authDomain=movie-app-e48e8.firebaseapp.com
+REACT_APP_projectId=movie-app-e48e8
+REACT_APP_storageBucket=movie-app-e48e8.appspot.com
+REACT_APP_messagingSenderId=760674641161
+REACT_APP_appId=1:760674641161:web:131f3f4dc0b54f63cf5fd8
+REACT_APP_TMDB_KEY=8f2ca002e986a1cafaf8f55e80fb42a7
+
+
+
+------------------
+my keys:
+apı anahtarı (v3 auth):
+f9069354781d4737bf67d31039990880
+
+Örnek API İsteği : 
+https://api.themoviedb.org/3/movie/550?api_key=f9069354781d4737bf67d31039990880
+
+API Okuma Erişim Jetonu (v4 auth);
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmOTA2OTM1NDc4MWQ0NzM3YmY2N2QzMTAzOTk5MDg4MCIsInN1YiI6IjYzNjM5ZTU3ODU4Njc4MDA3YTFjOTIzMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._9TlDss-Bo8Cn7q6wYhvA44_yFj88ktwvABelyVBriU

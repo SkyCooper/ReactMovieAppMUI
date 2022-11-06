@@ -18,12 +18,26 @@ import {
 
 // 2- firebaseConfig objesi bize firebase kayıtta verilen obje api vs bunun içinde bunu env içinde saklamak daha mantıklı
 const firebaseConfig = {
-  apiKey: "AIzaSyBN4f8Dw4LcOJQ7J8WaQ6eB7JEchKoRu2A",
-  authDomain: "reactmovieapp-b301a.firebaseapp.com",
-  projectId: "reactmovieapp-b301a",
-  storageBucket: "reactmovieapp-b301a.appspot.com",
-  messagingSenderId: "1027493718398",
-  appId: "1:1027493718398:web:869061dd3acbee63fc2b2f",
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
+
+  // apiKey: "process.env.REACT_APP_apiKey",
+  // authDomain: "process.env.REACT_APP_authDomain",
+  // projectId: "process.env.REACT_APP_projectId",
+  // storageBucket: "process.env.REACT_APP_storageBucket",
+  // messagingSenderId: "process.env.REACT_APP_messagingSenderId",
+  // appId: "process.env.REACT_APP_appId",
+  
+  // apiKey: "AIzaSyBN4f8Dw4LcOJQ7J8WaQ6eB7JEchKoRu2A",
+  // authDomain: "reactmovieapp-b301a.firebaseapp.com",
+  // projectId: "reactmovieapp-b301a",
+  // storageBucket: "reactmovieapp-b301a.appspot.com",
+  // messagingSenderId: "1027493718398",
+  // appId: "1:1027493718398:web:869061dd3acbee63fc2b2f",
 };
 
 //3- firebase servisini başlatmak için  aşağıdaki işlemle config dosyamızı initializeApp() metoduna ekleyip çalıştırmış oluyoruz
