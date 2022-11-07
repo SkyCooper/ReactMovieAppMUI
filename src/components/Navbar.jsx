@@ -5,6 +5,10 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
+import IconButton from "@mui/material/IconButton";
+import Avatar from "@mui/material/Avatar";
+import VideocamIcon from "@mui/icons-material/Videocam";
+
 
 
 export default function Navbar() {
@@ -13,12 +17,12 @@ export default function Navbar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <Typography
+          <VideocamIcon
             onClick={() => navigate("")}
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, cursor: "pointer" }}
-          >
+            fontSize="large"
+            sx={{ marginRight: "1rem", cursor: "pointer" }}
+          />
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             React Movie App
           </Typography>
           <Button onClick={() => navigate("login")} color="inherit">
@@ -27,6 +31,10 @@ export default function Navbar() {
           <Button onClick={() => navigate("register")} color="inherit">
             Register
           </Button>
+          <IconButton sx={{ marginLeft: "1rem" }}>
+            <Avatar alt="" />
+            {/* <Avatar alt="Remy Sharp" src={auth?.currentUser?.photoURL} /> */}
+          </IconButton>
         </Toolbar>
       </AppBar>
     </Box>

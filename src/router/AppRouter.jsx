@@ -6,6 +6,7 @@ import Main from "../pages/Main";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import MovieDetail from "../pages/MovieDetail";
+import NotFound from "../pages/NotFound";
 
 const AppRouter = () => {
   return (
@@ -17,6 +18,7 @@ const AppRouter = () => {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="detail" element={<MovieDetail />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

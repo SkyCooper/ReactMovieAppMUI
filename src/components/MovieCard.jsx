@@ -6,7 +6,8 @@ import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
 import Grid from "@mui/material/Grid";
 import Rating from "@mui/material/Rating";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
+import NotFound from "../pages/NotFound";
 
 export default function MovieCard({
   title,
@@ -16,10 +17,17 @@ export default function MovieCard({
 }) {
   const imgUrl = `https://image.tmdb.org/t/p/w1280${poster_path}`;
   const [value, setValue] = React.useState(3);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  const detailMovie = async () => {
+    try {
+    } catch (error) {
+      <Navigate to={<NotFound />} />;
+    }
+  };
   return (
-    <Grid item xs={12} sm={6} md={4} lg={3} onClick={()=> navigate("detail")}>
-      <Card sx={{ maxWidth: 345 }}>
+    <Grid item xs={12} sm={6} md={4} lg={3} onClick={() => navigate("detail")}>
+      <Card sx={{ maxWidth: 345 }} onClick={detailMovie}>
         <CardActionArea>
           <CardMedia component="img" image={imgUrl} alt={title} />
           <CardContent>
@@ -28,7 +36,7 @@ export default function MovieCard({
               <span>{vote_average}</span>
               <Rating
                 name="simple-controlled"
-                sx={{display : "block"}}
+                sx={{ display: "block" }}
                 value={value}
                 onChange={(event, newValue) => {
                   setValue(newValue);
