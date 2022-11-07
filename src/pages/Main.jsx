@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import SearchIcon from "@mui/icons-material/Search";
@@ -11,15 +11,15 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 
 const Main = () => {
+  const [searchText, setSearchText] = useState("");
+  const [movies, setMovies] = useState([]);
+
+
   const {
-    movies,
-    setMovies,
-    searchText,
-    setSearchText,
     Loggedin,
     setLoggedin,
   } = useAuthContext();
-  const apiKey = "f9069354781d4737bf67d31039990880";
+  const apiKey = process.env.REACT_APP_movieapiKey;
   const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
   const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchText}`;
   const getMovie = async () => {

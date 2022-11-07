@@ -14,20 +14,15 @@ export default function MovieCard({
   poster_path,
   vote_average,
   overview,
+  id,
 }) {
   const imgUrl = `https://image.tmdb.org/t/p/w1280${poster_path}`;
   const [value, setValue] = React.useState(3);
   const navigate = useNavigate();
 
-  const detailMovie = async () => {
-    try {
-    } catch (error) {
-      <Navigate to={<NotFound />} />;
-    }
-  };
   return (
-    <Grid item xs={12} sm={6} md={4} lg={3} onClick={() => navigate("detail")}>
-      <Card sx={{ maxWidth: 345 }} onClick={detailMovie}>
+    <Grid item xs={12} sm={6} md={4} lg={3}>
+      <Card sx={{ maxWidth: 345 }} onClick={() => navigate(`/detail/${id}`)}>
         <CardActionArea>
           <CardMedia component="img" image={imgUrl} alt={title} />
           <CardContent>
