@@ -18,7 +18,7 @@ import {
 
 // 2- firebaseConfig objesi bize firebase kayıtta verilen obje api vs bunun içinde bunu env içinde saklamak daha mantıklı
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_apiKey,
+  apiKey: process.env.REACT_APP_firebaseKey,
   authDomain: process.env.REACT_APP_authDomain,
   projectId: process.env.REACT_APP_projectId,
   storageBucket: process.env.REACT_APP_storageBucket,
@@ -31,7 +31,7 @@ const firebaseConfig = {
   // storageBucket: "process.env.REACT_APP_storageBucket",
   // messagingSenderId: "process.env.REACT_APP_messagingSenderId",
   // appId: "process.env.REACT_APP_appId",
-  
+
   // apiKey: "AIzaSyBN4f8Dw4LcOJQ7J8WaQ6eB7JEchKoRu2A",
   // authDomain: "reactmovieapp-b301a.firebaseapp.com",
   // projectId: "reactmovieapp-b301a",

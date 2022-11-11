@@ -13,12 +13,23 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import GoogleIcon from "@mui/icons-material/Google";
+import { useState } from "react";
+import {
+  loginUser,
+  loginWithGoogle,
+  loginOut,
+  loginControl,
+} from "../auth/firebase";
+
 
 const theme = createTheme();
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
+    loginUser(email, password); 
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get("email"),
@@ -88,15 +99,16 @@ const Login = () => {
                 id="password"
                 autoComplete="current-password"
               />
-              <FormControlLabel
+              {/* <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
-              />
+              /> */}
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                onSubmit={(e) => handleSubmit(e)}
               >
                 Sign In
               </Button>
@@ -132,7 +144,6 @@ const Login = () => {
 
 export default Login;
 
-
 function Copyright(props) {
   return (
     <Typography
@@ -150,4 +161,3 @@ function Copyright(props) {
     </Typography>
   );
 }
-
